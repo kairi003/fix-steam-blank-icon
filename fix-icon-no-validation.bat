@@ -25,7 +25,7 @@ echo Processing: %~1
 REM Read the file line by line
 for /f "usebackq delims=" %%i in ("%~1") do set "%%~i" 2>nul
 REM Validate the URL and extract the game ID
-if "%URL:~0,18%" == "steam://rungameid/" set "gameid=%URL:~18%"
+set "gameid=%URL:~18%"
 REM Extract the icon file name
 for %%f in ("%IconFile%") do set "icon_name=%%~nxf"
 
