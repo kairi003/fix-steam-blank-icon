@@ -8,5 +8,5 @@ ref: https://github.com/mrsimb/steam_blank_icon_fix
 Drop blank steam game shortcuts on `fix-icon.bat`, or run on command prompt like following:
 
 ```cmd
-fix-icon.bat game1.url game2.url ...
+fix-icon.bat .\Desktop\game1.url .\Desktop\game2.url ...
 ```
