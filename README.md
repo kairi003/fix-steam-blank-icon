@@ -1,8 +1,11 @@
 # fix-steam-blank-icon.bat
 
-Fixes blank icons for Steam games shortcuts.
+Fixes blank icons for Steam game shortcuts.
 
-ref: https://github.com/mrsimb/steam_blank_icon_fix
+Ref: https://github.com/mrsimb/steam_blank_icon_fix
+
+Note: `fix-icon-no-validation.bat` is a version of `fix-icon.bat` without error handling.
+It is provided NOT for actual use, but to enhance readability and ease of understanding.
 
 ## Usage
 Drag and drop blank steam game shortcuts on `fix-icon.bat`, or run on command prompt like following:
