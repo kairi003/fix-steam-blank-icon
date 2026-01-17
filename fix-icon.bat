@@ -61,8 +61,24 @@ if not defined icon_name (
 
 REM Download the icon file
 REM Icon location is written on: https://steamdb.info/app/{gameid}/info/
+
+set "icon_url=https://shared.fastly.steamstatic.com/community_assets/images/apps/%gameid%/%icon_name%"
+echo Downloading icon file: "%icon_url%"
+curl -fo "%IconFile%" "%icon_url%"
+
+if not errorlevel 1 (
+    echo Icon file downloaded successfully: "%IconFile%"
+    exit /b 0
+)
+
 set "icon_url=https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/%gameid%/%icon_name%"
 echo Downloading icon file: "%icon_url%"
-curl -o "%IconFile%" "%icon_url%"
+curl -fo "%IconFile%" "%icon_url%"
+
+if not errorlevel 1 (
+    echo Icon file downloaded successfully: "%IconFile%"
+    exit /b 0
+)
+
 
 exit /b 0
