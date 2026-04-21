@@ -48,8 +48,8 @@ if not defined gameid (
 
 REM Check if icon file already exists
 if exist "%IconFile%" (
-    echo Icon file already exists: "%IconFile%"
-    exit /b 1
+    echo Deleting corrupted icon: "%IconFile%"
+    del "%IconFile%"
 )
 
 REM Extract the icon file name
